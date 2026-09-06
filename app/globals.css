@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grid-bg: #05070a;
+  --grid-amber: #f59e0b;
+  --grid-amber-soft: #fbbf24;
+  --grid-teal: #2dd4bf;
+  --grid-teal-soft: #5eead4;
+  --grid-ink: #e2e8f0;
+  --grid-muted: #8b97a8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--grid-bg);
+  color: var(--grid-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-mono-grid {
+  font-family: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+/* Section fade-in/out driven by data-active, toggled from the scroll store */
+.grid-section {
+  min-height: 100vh;
+  transition: opacity 0.6s ease;
+}
+
+.grid-panel {
+  background: rgba(5, 7, 10, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(45, 212, 191, 0.15);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
+}
+
+.text-glow-teal {
+  text-shadow: 0 0 24px rgba(45, 212, 191, 0.35);
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.35);
+}
+
+/* Scrollbar to match the theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--grid-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.25);
+  border-radius: 6px;
+}
